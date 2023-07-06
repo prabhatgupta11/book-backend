@@ -9,6 +9,10 @@ app.use(cors())
 
 
 app.use("/api",bookrouter)
+
+app.get("/",(req,res)=>{
+    res.send({msg:"working"})
+})
 app.listen(process.env.port,async(req,res)=>{
     try{
          await connection;
